@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Corner Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cornerstudio.css">
+</head>
+
+<body>
+
+    <header id="encabezado">
+
+        <div class="logoBanner"></div>
+
+            <nav>
+                <ul id="menu">
+                    <li class="elementoMenu"><a href="#encabezado">Home</a></li>
+                    <li class="elementoMenu"><a href="#Servicios">Servicios</a></li>
+                    <li class="elementoMenu"><a href="#AreasTrabajo">Areas Trabajo</a></li>
+                    <li class="elementoMenu"><a href="#grabacionesDiscografia">Grabaciones</a></li>
+                    <li class="elementoMenu"><a href="#contacto">Contacto</a></li>
+                </ul>
+
+            </nav>
+    
+        <h1 id="tituloWeb">Estudio De Grabación</h1>
+        <h2 id="subtituloWeb">Grabación y Mastering</h2>
+        </header>
+        
+        <section id="Servicios">
+            
+            <h2 class="tituloApartados">Servicios</h2>
+            <h2 class="subtituloApartados">Nuestras Especialidades</h2>
+            
+            <div id="contenedorServicios">
+
+                <div class="bloque1"></div>
+                <div class="bloque2"></div>
+                <div class="bloque3"></div>
+
+
+                <div class="titulobloq1">GRABACIONES</div>
+                <div class="textobloq1">
+                    <p>Corner Studio cuenta con dos salas equipadas 
+                    para grabación de <br>instrumentos,voces y baterías,con material profesional y todas las <br>condiciones 
+                    para que los artistas hagan su trabajo de <br>la forma 
+                    más relajada.</p>
+                </div>
+
+                <div class="titulobloq2">MEZCLA</div>
+                <div class="textobloq2">
+                    <p>Mezclamos y masterizamos canciones que han Studio
+                    grabadas<br> en Corner Studio o en otro estudio.<br>
+                    Nuestra misión es que tus canciones suenen profesionales<br>
+                    en las plataformas como Spotify , Youtube o Itunes.
+                    </p>
+                </div>
+
+                <div class="titulobloq3">MASTERING</div>
+                <div class="textobloq3">
+                    <p>Mezclamos y masterizamos canciones que han Studio
+                    grabadas<br> en Corner Studio o en otro estudio.<br>
+                    Nuestra misión es que tus canciones suenen profesionales<br>
+                    en las plataformas como Spotify , Youtube o Itunes.
+                    </p>
+                </div>
+
+
+            </div>
+
+
+
+        </section>
+
+
+        <section id="AreasTrabajo">
+            
+            <h2 class="tituloAreas">Áreas de Trabajo</h2>
+            <h2 class="subtituloAreas">El Estudio</h2>
+            
+            
+            <div id="contenedorAreasTrabajo">
+                
+                <div class="container">
+                    <div class="button-group">
+                      <button class="button active" onclick="showSection('pestana1')">GRABACIÓN</button>
+                      <button class="button" onclick="showSection('pestana2')">MEZCLA</button>
+                      <button class="button" onclick="showSection('pestana3')">MASTERING</button>
+                    </div>
+                    <script>
+                        function showSection(pestana){
+                            var elementos = document.querySelectorAll(".section");
+                            for (var i = 0; i < elementos.length; i++) {
+                            elementos[i].style.display = "none";
+                            }
+                            var elemento = document.getElementById(pestana);
+                            elemento.style.display="block";
+                            var botones = document.querySelectorAll(".button");
+                            for (var i = 0; i < botones.length; i++) {
+                                botones[i].classList.remove("active");
+                            }
+                            var boton = document.querySelector(".button[onclick='showSection(\"" + pestana + "\")']");
+                            boton.classList.add("active");
+
+                        }
+
+                    </script>
+                   
+                    <div class="section" id="pestana1">
+                      <img src="Imagenes/Studio4.jpeg" alt="Grabación" id="section-0" class="section-img">
+                      <p id="section-0-text" class="section-text des-grabacion">Tratamiento acústico, iluminación cálida y climatización independiente son las características de la Sala de Grabación.</p>
+                    </div>
+                    
+                    <div class="section" id="pestana2" style="display: none;">
+                      <img src="Imagenes/imagen1.jpeg" alt="Mezcla" id="section-1" class="section-img">
+                      <p id="section-1-text" class="section-text des-mezcla">Previos de gama alta, compresores y ecualizadores analógicos, plugins  y muchas más herramientas para un acabado profesional a un nivel competitivo.</p>
+                    </div>
+                    
+                    <div class="section" id="pestana3" style="display: none;">
+                      <img src="Imagenes/Studio5.jpg" alt="Mastering" id="section-2" class="section-img">
+                      <p id="section-2-text" class="section-text des-mastering">El tratamiento acústico y los diferentes sistemas de monitores nos facilitan la toma de decisiones.</p>
+                    </div>
+                  </div>
+                  <h2 class="subAreas">TIPOS DE SALAS</h2>
+        </section>
+                    
+
+
+
+     <section id="grabacionesDiscografia">
+
+        <h2 class="tituloGrabaciones">Corner Studio</h2>
+        <h2 class="subtituloGrabaciones">Grabaciones y Discografía</h2>
+        <div class="desgrabaciones">
+            <p>Mezclamos y masterizamos canciones que han Studio
+            grabadas<br> en Corner Studio o en otro estudio.<br>
+            Nuestra misión es que tus canciones suenen profesionales<br>
+            en las plataformas como Spotify , Youtube o Itunes.
+            </p>
+        </div>
+        <div class="tablaGrabaciones">
+
+            
+ 
+            <div>
+                <h3 class="tituloArtista">ARTISTA</h3>
+                <h3 class="tituloCancion">CANCIÓN</h3>
+                <h3 class="tituloCodigo">CÓDIGO SWC</h3>    
+            </div>
+            <div>
+                <span>Jordi Gorchs</span>
+                <span>Volverá</span>
+                <span>32527ISBN</span>
+            </div>
+            <div>
+                <span>Horem Álvarez</span>
+                <span>Creo</span>
+                <span>57436ISBN</span>
+            </div>
+            <div>
+                <span>Horem Álvarez</span>
+                <span>Cosas Que No Entiendo</span>
+                <span>57436ISBN</span>
+            </div>
+            <div><span>Horem Álvarez</span>
+                <span>Creo</span>
+                <span>45745ISBN</span>
+            </div>
+            <div>
+                <span>Dani Martín</span>
+                <span>Emocional</span>
+                <span>23478ISBN</span>
+            </div>
+            <div>
+                <span>Jesus Linares</span>
+                <span>Step</span>
+                <span>78945ISBN</span>
+            </div>
+            <div>
+                <span>Andres Suarez</span>
+                <span>Aunque tú no lo Sepas</span>
+                <span>32741ISBN</span>
+            </div>
+        </div>
+
+      </section>
+
+        <section id="contacto">
+
+            <h2 class="tituloContacto">Contacto</h2>
+            
+            <div id="contenedorContacto"> 
+                
+                <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3019.3198073704193!2d2.1390567520916477!3d41.37935344279742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1679511481567!5m2!1ses!2ses" width="831" height="617" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                <form action="" id="formulario">
+
+                    <p id="textoFormulario">Contacto</p>
+                    <input type ="text" name="Nombre"
+                    placeholder="Nombre">
+                    <input type ="text" name="Apellido"
+                    placeholder="Apellidos">
+                    <input type ="Escribe el Servicio" name="Servicio"
+                    placeholder="Grabacion,Mezcla,Mastering">
+                    <input type ="Email" name="Correo"
+                    placeholder="Correo Electrónico">
+                    <input id="botonEnviar" type="submit" value="Enviar">
+
+                 </form>
+
+            </div>
+            
+
+        </section>
+        <footer id="footer">
+            <div class="copyright">
+                <p>Copyright © 2023, Corner Studio España, S.L.<br>
+                    Reservados todos los derechos
+                </p>
+            </div>
+            <div class="logoFooter"></div>
+
+
+        </footer>
+</body>
+</html>
