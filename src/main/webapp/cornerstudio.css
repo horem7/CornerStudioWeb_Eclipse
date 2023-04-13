@@ -89,72 +89,28 @@ font-size: 2rem;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-}
-.bloque1{
-    width: 397px;
-    height: 283px;
-    margin-left:76px;
-   /* background-image: url('Imagenes/Studio3.jpg');*/
-    background-size: cover;
-    background-position: center;
-}
-.bloque2{
-    margin-top:-284px;
-    width: 397px;
-    height: 283px;
-    margin-left:618px;
-    background-image: url('Imagenes/studio1.jpg');
-    background-size: cover;
-    background-position: center;
+	display:flex;
+	column-gap:20px;
+	justify-content: space-evenly;
 }
 
-.bloque3{
-    margin-top:-284px;
-    width: 397px;
-    height: 283px;
-    margin-left:1163px;
-    background-image: url('Imagenes/studio2.jpg');
-    background-size: cover;
-    background-position: center;
-}
+	#contenedorServicios .col{
+		width:397px;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    row-gap: 20px;
+	}
+		#contenedorServicios h3{
+			font-family: 'Anton', sans-serif;
+    		font-size: 30px;
+    	}
 
-.titulobloq1{
-    font-family: 'Anton', sans-serif;
-    font-size: 30px;
-    padding-left: 183px;
-    margin-top: 34px;
-
-}
-
-.textobloq1{
-    font-family: 'Courgette', cursive;
-    margin-top:70px;
-    font-size: 1,5rem;  
-}
-.titulobloq2{
-    font-family: 'Anton', sans-serif;
-    font-size: 30px;
-    padding-left: 759px;
-    margin-top:-200px;
-}
-.textobloq2{
-    font-family: 'Courgette', cursive;
-    margin-top:70px;
-    font-size: 1,5rem;  
-    margin-left:618px;
-}
-.titulobloq3{
-    font-family: 'Anton', sans-serif;
-    font-size: 30px;
-    padding-left: 1296px;
-    margin-top:-200px;
-}
-.textobloq3{
-    font-family: 'Courgette', cursive;
-    margin-top:70px;
-    font-size: 1,5rem;  
-    margin-left:1163px;
-}
+		#contenedorServicios p{
+		    font-family: 'Courgette', cursive;
+		    margin-top:50px;
+		    font-size: 1,5rem;  
+		}
 
 /* Fin de Servicios*/
 
