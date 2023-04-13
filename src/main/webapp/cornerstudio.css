@@ -94,7 +94,7 @@ font-size: 2rem;
     width: 397px;
     height: 283px;
     margin-left:76px;
-    background-image: url('Imagenes/Studio3.jpg');
+   /* background-image: url('Imagenes/Studio3.jpg');*/
     background-size: cover;
     background-position: center;
 }
