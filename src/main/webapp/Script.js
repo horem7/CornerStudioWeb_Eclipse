@@ -25,7 +25,7 @@ function modalContacto(){
 	
 	var mensaje;
 	
-	function formCheck(){
+	(function formcheck(){
 		if(!document.getElementById("formNombre").checkValidity()){
 			mensaje="Introduce un Nombre. ";
 			document.getElementById("mensajeContacto").innerHTML=mensaje;
@@ -42,8 +42,18 @@ function modalContacto(){
 			mensaje="Introduce un correo electónico:  ";
 			document.getElementById("mensajeContacto").innerHTML=mensaje;
 		}
-	}
+		else{
 	
-	mensaje="Hemos recicibo la solicitud" +nombre+ apellido + ", confirmaremos que quiere realizar el servicio de: "+servicio+ "y le haremos llegar en el correo" +correo+ " la confirmación.Muchas Gracias , Att: Equipo Corner Studio."
-	document.getElementById("mensajeContacto").innerHTML =mensaje;
+			mensaje="Hemos recicibo la solicitud  "+ nombre + apellido + " , confirmaremos que quiere realizar el servicio de:  " +servicio+ " y le haremos llegar en el correo" +correo+ " la confirmación.Muchas Gracias , Att: Equipo Corner Studio."
+			document.getElementById("mensajeContacto").innerHTML =mensaje;
+			}
+	})();
+}		
+
+function cerrarMC(){
+	document.getElementById("modalContacto").style.display="none";
+	document.documentElement.style.overflow="auto";
 }
+
+//ARRANCA CÓDIGO PARA MENÚ
+
