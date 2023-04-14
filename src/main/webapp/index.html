@@ -11,10 +11,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="cornerstudio.css">
+    <script src="Script.js"></script>
 </head>
 
 <body>
 
+
+	<!-- MODAL BIENVENIDA A LA WEB -->
+	<div id="modalWelcome">
+		<div id="modalBoxW"">
+			<h1>Bienvenido a Corner Studio</h1>
+			<button onclick="closeModalWelcome()">Entrar</button>
+		</div>
+	</div>
+	
     <header id="encabezado">
 
         <div class="logoBanner"></div>
@@ -22,12 +32,18 @@
         <nav>
             <ul id="menu">
                 <li class="elementoMenu"><a href="#encabezado">Home</a></li>
-                <li class="elementoMenu"><a href="#Servicios">Servicios</a></li>
+                <li class="elementoMenu"><a href="#Servicios">Servicios</a>
+ 
+		               	<ul id="submenu">
+		               			<li class="elementosub"><a href="">Grabación</a></li>
+		               			<li class="elementosub"><a href="">Mezcla</a></li>
+		               			<li class="elementosub"><a href="">Mastering</a></li>
+		               	</ul>
+                </li>
                 <li class="elementoMenu"><a href="#AreasTrabajo">Areas Trabajo</a></li>
                 <li class="elementoMenu"><a href="#grabacionesDiscografia">Grabaciones</a></li>
                 <li class="elementoMenu"><a href="#contacto">Contacto</a></li>
             </ul>
-
 
         </nav> 
             
@@ -43,7 +59,7 @@
         <div id="contenedorServicios">
 			
             <div class="col">
-            	<img src="Imagenes/Studio3websize.jpeg" alt="">
+            	<div class="imagen"><img src="Imagenes/Studio3websize.jpeg" alt=""></div>
             	<h3>GRABACIONES</h3>
             	<p>Corner Studio cuenta con dos salas equipadas 
                 para grabación de instrumentos,voces y baterías,con material profesional y todas las condiciones 
@@ -53,7 +69,7 @@
           
             
             <div class="col">
-            	<img src="Imagenes/studio1websize.jpg" alt="">
+            	<div class="imagen"><img src="Imagenes/studio1websize.jpg" alt=""></div>
               	<h3>MEZCLA</h3>
                 <p>Mezclamos y masterizamos canciones que han Studio
                 grabadas en Corner Studio o en otro estudio.
@@ -63,7 +79,7 @@
            </div>
             
             <div class="col">
-            	<img src="Imagenes/Studio2websize.jpg" alt="">
+            	<div class="imagen"><img src="Imagenes/Studio2websize.jpg" alt=""></div>
 				<h3>MASTERING</h3>
                 <p>Mezclamos y masterizamos canciones que han Studio
                 grabadas en Corner Studio o en otro estudio.
@@ -188,6 +204,25 @@
         </div>
 
       </section>
+      <section id="MultimediaStudio">
+        
+        <h2 class="tituloApartadomult">Multimedia Studio</h2>
+        <h2 class="subtituloApartadosmult"></h2>
+        
+        <div id="contenedorMultimedia">
+			
+            <div class="col">
+	            	<div class="video"><video width="640" height="480" controls>
+	  				<source src="Media/CornerStudio-Teaser.mp4" type="video/mp4"></video>
+	  				</div>
+            			<h3>Nuestro Estudio De Grabación</h3>
+				            <p>Corner Studio , déjate llevar por todas las emociones y sensaciones que pasan a diario en nuestro estudio.
+				           </p>
+			</div>
+          
+
+    </section>
+      
 
         <section id="contacto">
 
@@ -200,19 +235,30 @@
                 <form action="" id="formulario">
 
                     <p id="textoFormulario">Contacto</p>
-                    <input type ="text" name="Nombre"
+                    <input id="formNombre" type ="text" name="Nombre"
                     placeholder="Nombre">
-                    <input type ="text" name="Apellido"
+                    <input id="formApellido" type ="text" name="Apellido"
                     placeholder="Apellidos">
-                    <input type ="Escribe el Servicio" name="Servicio"
+                    <input id="formServicio" type ="Escribe el Servicio" name="Servicio"
                     placeholder="Grabacion,Mezcla,Mastering">
-                    <input type ="Email" name="Correo"
+                    <input id="formCorreo" type ="Email" name="Correo"
                     placeholder="Correo Electrónico">
-                    <input id="botonEnviar" type="submit" value="Enviar">
+                    <input type="submit" id="botonEnviar" onclick="modalContacto()" value="Enviar">
 
                  </form>
 
-            </div>
+           </div>
+           
+           
+           	<!-- MODAL CONTACTO ESTUDIO -->
+	<div id="modalContacto">
+		<div id="modalBoxC"">
+			<h1>¡Has Contactado Con Nosotros!</h1>
+			<p id="mensajeContacto">Hemos recibido 
+			tu solicitud, nos pondremos en contacto lo más breve posible.</p>
+			<button onclick="modalContacto()">CONTINUAR</button>
+		</div>
+	</div>
             
 
         </section>
@@ -223,8 +269,9 @@
                 </p>
             </div>
             <div class="logoFooter"></div>
-
-
-        </footer>
-</body>
+		</footer>
+		<script>
+			//modalWelcome();
+		</script>
+ </body>
 </html>
